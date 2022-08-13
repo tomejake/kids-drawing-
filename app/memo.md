@@ -10,3 +10,5 @@ app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintLeft_toLeftOf="parent"
 app:layout_constraintRight_toRightOf="parent"
 app:layout_constraintTop_toTopOf="parent"
+
+### android:dither="true": 이미지 조정 RGB 로 만든 이미지를 사용자가 ARGB 환경에서도 볼 수 있게 함
