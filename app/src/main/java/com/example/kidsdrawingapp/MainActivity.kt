@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
+import androidx.core.view.get
 
 class MainActivity : AppCompatActivity() {
     private var drawingView: DrawingView? = null
@@ -16,6 +19,13 @@ class MainActivity : AppCompatActivity() {
 
         drawingView = findViewById(R.id.drawing_view)
         drawingView?.setSizeForBrush(20.toFloat())
+
+        // LinearLayout 을 불러오면 선형으로 나열된 데이터를 쉽게 찾아올 수 있다.
+        val linearLayoutPaintColors:LinearLayout = findViewById(R.id.ll_paint_colors)
+        mImageButtonCurrentPaint = linearLayoutPaintColors[2] as ImageButton
+        mImageButtonCurrentPaint!!.setImageDrawable(
+            ContextCompat.getDrawable(this, R.drawable.pallet_pressed)
+        )
 
         val ib_bursh: ImageButton = findViewById(R.id.ib_brush)
 

@@ -12,3 +12,10 @@ app:layout_constraintRight_toRightOf="parent"
 app:layout_constraintTop_toTopOf="parent"
 
 ### android:dither="true": 이미지 조정 RGB 로 만든 이미지를 사용자가 ARGB 환경에서도 볼 수 있게 함
+
+### LinearLayout 을 불러오면 선형으로 나열된 데이터를 쉽게 찾아올 수 있다.
+예시)
+``` kotlin
+    val linearLayoutPaintColors:LinearLayout = findViewById(R.id.ll_paint_colors)
+    mImageButtonCurrentPaint = linearLayoutPaintColors[1] as ImageButton
+```
