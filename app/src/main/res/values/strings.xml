@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">kids drawing app</string>
     <string name="image">image</string>
+    <string name="save">save</string>
+    <string name="brush">brush</string>
+    <string name="undo">undo</string>
+    <string name="gallery">gallery</string>
 </resources>
