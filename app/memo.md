@@ -19,3 +19,19 @@ app:layout_constraintTop_toTopOf="parent"
     val linearLayoutPaintColors:LinearLayout = findViewById(R.id.ll_paint_colors)
     mImageButtonCurrentPaint = linearLayoutPaintColors[1] as ImageButton
 ```
+
+## 권한부여
+1. manifests/ 에서 기능 추가
+    <uses-permission android:name="android.permission.CAMERA"/> 추가 (예시는 카메라)
+
+2. MainActivity 에서 선언 후 구현
+    private val cameraResultLauncher: ActivityResultLauncher<String> =
+            registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+                isGranted ->
+                if(isGranted){
+                    Toast.makeText(this, "Permission granted for camera", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Permission denied for camera", Toast.LENGTH_LONG).show()
+                }
+            }
+
